@@ -18,3 +18,6 @@ target_link_libraries(${PROJECT_NAME}   ${Boost_LIBRARIES}
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin
                                 LIBRARY DESTINATION lib
 )
+
+SET(HS ${CMAKE_SOURCE_DIR}/include/EFStream.hpp  ${CMAKE_SOURCE_DIR}/include/MatlabIOContainer.hpp  ${CMAKE_SOURCE_DIR}/include/MatlabIO.hpp  ${CMAKE_SOURCE_DIR}/include/typetraits.hpp)
+INSTALL(FILES ${HS} DESTINATION include/${PROJECT_NAME})
